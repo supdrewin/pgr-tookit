@@ -1,0 +1,19 @@
+[package]
+name = "pgr-dl"
+description = "PGR Download Library written in Rust"
+edition.workspace = true
+version.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+
+[dependencies]
+clap.workspace = true
+futures-util.workspace = true
+indicatif.workspace = true
+md-5.workspace = true
+pgr-md.workspace = true
+reqwest.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+tokio.workspace = true

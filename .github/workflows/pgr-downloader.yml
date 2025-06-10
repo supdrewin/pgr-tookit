@@ -1,0 +1,21 @@
+name: Windows build
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: cargo b -r
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: target/release/pgr-downloader.exe
